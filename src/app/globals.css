@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none; /* Hide navbar links on smaller screens */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    gap: 1rem; /* Add spacing between links */
+  }
+
+  .hamburger-menu {
+    display: none; /* Hide hamburger menu */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Smaller font for mobile screens */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}
